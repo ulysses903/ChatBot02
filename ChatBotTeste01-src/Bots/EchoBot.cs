@@ -13,7 +13,7 @@ namespace Microsoft.Bot.Builder.EchoBot
     {
         protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
         {
-            await turnContext.SendActivityAsync(MessageFactory.Text($"Teste de Eco 123: {turnContext.Activity.Text}"), cancellationToken);
+            await turnContext.SendActivityAsync(MessageFactory.Text($"Ecoando: {turnContext.Activity.Text}"), cancellationToken);
         }
 
         protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
